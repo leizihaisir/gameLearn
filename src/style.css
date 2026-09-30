@@ -1,0 +1,160 @@
+:root {
+  --bg: #0d1017;
+  --panel: #161b26;
+  --panel-2: #1d2432;
+  --line: #2a3345;
+  --text: #e6edf7;
+  --muted: #8b97ad;
+  --accent: #4fa8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 0%, #1a2233 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 16px;
+  transform-origin: center center;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 152px;
+}
+
+.card {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card canvas {
+  display: block;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.stat strong {
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stage {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #05070b;
+  box-shadow: 0 18px 50px rgb(0 0 0 / 55%);
+}
+
+.stage canvas {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  background: rgb(5 7 11 / 82%);
+  backdrop-filter: blur(2px);
+}
+
+.overlay.visible {
+  display: flex;
+}
+
+.overlay h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.overlay .hint {
+  color: var(--accent);
+}
+
+.overlay .big {
+  font-size: 22px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.help p {
+  margin: 0 0 6px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.help p:last-child {
+  margin-bottom: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 4px;
+  margin-right: 2px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--panel-2);
+  font: inherit;
+  font-size: 10px;
+  color: var(--text);
+}

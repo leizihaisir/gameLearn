@@ -1,0 +1,18 @@
+# 统一行尾为 LF，避免 Windows / macOS / Linux 协作时产生整文件假改动。
+# 注意：core.autocrlf=true 的默认行为会在检出时把 LF 换成 CRLF，
+# 这份配置把它固定下来。
+* text=auto eol=lf
+
+# 二进制文件不做行尾转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+
+# 锁文件视为生成产物，折叠 diff 噪音
+pnpm-lock.yaml linguist-generated=true

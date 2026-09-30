@@ -1,0 +1,5 @@
+# pnpm 11 把项目级设置从 package.json 移到了这里。
+# 允许 esbuild 执行安装脚本，否则 `pnpm install` 会以
+# ERR_PNPM_IGNORED_BUILDS 退出 1，进而让 `pnpm run` / `pnpm exec` 连带失败。
+allowBuilds:
+  esbuild: true

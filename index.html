@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>俄罗斯方块 · TypeScript</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="side">
+        <section class="card">
+          <h2>Hold</h2>
+          <canvas id="hold"></canvas>
+        </section>
+        <section class="card stats">
+          <div class="stat"><span>分数</span><strong id="score">0</strong></div>
+          <div class="stat"><span>等级</span><strong id="level">1</strong></div>
+          <div class="stat"><span>消行</span><strong id="lines">0</strong></div>
+          <div class="stat"><span>最高分</span><strong id="best">0</strong></div>
+        </section>
+      </aside>
+
+      <main class="stage" id="stage">
+        <canvas id="board"></canvas>
+        <div id="overlay" class="overlay"></div>
+      </main>
+
+      <aside class="side">
+        <section class="card">
+          <h2>Next</h2>
+          <canvas id="next"></canvas>
+        </section>
+        <section class="card help">
+          <p><kbd>←</kbd><kbd>→</kbd> 移动</p>
+          <p><kbd>↓</kbd> 软降 · <kbd>Space</kbd> 硬降</p>
+          <p><kbd>↑</kbd><kbd>X</kbd> 顺时针</p>
+          <p><kbd>Z</kbd> 逆时针 · <kbd>A</kbd> 180°</p>
+          <p><kbd>C</kbd> / <kbd>Shift</kbd> Hold</p>
+          <p><kbd>P</kbd> / <kbd>Esc</kbd> 暂停</p>
+          <p><kbd>R</kbd> 重新开始</p>
+        </section>
+      </aside>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
